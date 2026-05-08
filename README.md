@@ -46,6 +46,14 @@ Paste this into your Claude Code / Cursor / Codex / etc. session:
 
 > Fetch the five rule files at `https://raw.githubusercontent.com/bxxd/agentic-engineering-philosophy/main/rules/` (`developer.md`, `architecture.md`, `debugging.md`, `quality.md`, `management.md`) and add them to this project. Either save them to `.claude/rules/`, or `@`-reference them from `CLAUDE.md` / `AGENTS.md` — pick whichever fits the existing setup.
 
+## Where to run the agent
+
+These rules feed AI coding agents. Don't run those agents on the root of your home machine.
+
+- Use an Incus container, a VM, or a separate physical box — anywhere with a fresh user account and contained blast radius.
+- For a home lab, Tailscale ties the boxes together cleanly — laptop, sandbox host, anything else — over a private mesh, no port forwarding required.
+- Agents have shell, file, and network access. A wrong command on your real home user touches your dotfiles, your SSH keys, your browser sessions, and anything else that account can reach. A container is a small price.
+
 ## License
 
 MIT.
