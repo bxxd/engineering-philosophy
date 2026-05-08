@@ -1,1 +1,1 @@
-@PHILOSOPHY.md
+@rules/developer.md
