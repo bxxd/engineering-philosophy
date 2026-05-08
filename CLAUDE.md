@@ -1,12 +1,8 @@
-@rules/developer.md
-@rules/architecture.md
-@rules/debugging.md
-@rules/quality.md
-@rules/management.md
+@README.md
 
 # Contributing to this repo
 
-The rule files in `rules/` are drop-in. People install one file, two files, or all five into `.claude/rules/` — sometimes via curl, sometimes via "ask the agent." Each file must stand on its own.
+The rule files in `rules/` are drop-in. People install one file, two files, or all of them into `.claude/rules/` — sometimes via curl, sometimes via "ask the agent." Each file must stand on its own.
 
 ## House rules for editing `rules/*.md`
 
@@ -20,6 +16,5 @@ The rule files in `rules/` are drop-in. People install one file, two files, or a
 
 - Update the README's "The rules" list if you add or rename a file.
 - Update the install loop in the README to include any new file.
-- Update the `@rules/...` references at the top of this `CLAUDE.md`.
 - Update the agent-prompt option in the README so it lists the same files.
 - Don't introduce a cross-link to fix a redundancy. Either keep both copies, or pick one home.

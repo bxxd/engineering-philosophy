@@ -10,7 +10,7 @@ Rules for AI coding agents.
 - [rules/architecture.md](./rules/architecture.md) — language preferences, separation of concerns, hexagonal architecture.
 - [rules/debugging.md](./rules/debugging.md) — Zero Effect Law, Detective Mode, sub-1ms targets.
 - [rules/quality.md](./rules/quality.md) — Zero Warnings Policy, Go native.
-- [rules/management.md](./rules/management.md) — Conway's Law, Inverse Conway, bus factor.
+- [rules/management.md](./rules/management.md) — Conway's Law as architecture context. Org structure is upstream of the seams the agent should propose.
 
 ## Install
 
