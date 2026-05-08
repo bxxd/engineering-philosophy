@@ -10,6 +10,7 @@ Rules for AI coding agents.
 - [rules/architecture.md](./rules/architecture.md) — language preferences, separation of concerns, hexagonal architecture.
 - [rules/debugging.md](./rules/debugging.md) — Zero Effect Law, Detective Mode, sub-1ms targets.
 - [rules/quality.md](./rules/quality.md) — Zero Warnings Policy, Go native.
+- [rules/management.md](./rules/management.md) — Conway's Law, Inverse Conway, bus factor.
 
 ## Install
 
@@ -23,7 +24,7 @@ Claude Code auto-loads any markdown in `.claude/rules/`.
 
 ```bash
 mkdir -p .claude/rules
-for f in developer.md architecture.md debugging.md quality.md; do
+for f in developer.md architecture.md debugging.md quality.md management.md; do
   curl -fsSL "https://raw.githubusercontent.com/bxxd/agentic-engineering-philosophy/main/rules/$f" \
     -o ".claude/rules/$f"
 done
@@ -33,7 +34,7 @@ done
 
 ```bash
 mkdir -p ~/.claude/rules
-for f in developer.md architecture.md debugging.md quality.md; do
+for f in developer.md architecture.md debugging.md quality.md management.md; do
   curl -fsSL "https://raw.githubusercontent.com/bxxd/agentic-engineering-philosophy/main/rules/$f" \
     -o "$HOME/.claude/rules/$f"
 done
@@ -43,7 +44,7 @@ done
 
 Paste this into your Claude Code / Cursor / Codex / etc. session:
 
-> Fetch the four rule files at `https://raw.githubusercontent.com/bxxd/agentic-engineering-philosophy/main/rules/` (`developer.md`, `architecture.md`, `debugging.md`, `quality.md`) and add them to this project. Either save them to `.claude/rules/`, or `@`-reference them from `CLAUDE.md` / `AGENTS.md` — pick whichever fits the existing setup.
+> Fetch the five rule files at `https://raw.githubusercontent.com/bxxd/agentic-engineering-philosophy/main/rules/` (`developer.md`, `architecture.md`, `debugging.md`, `quality.md`, `management.md`) and add them to this project. Either save them to `.claude/rules/`, or `@`-reference them from `CLAUDE.md` / `AGENTS.md` — pick whichever fits the existing setup.
 
 ## License
 

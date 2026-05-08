@@ -2,3 +2,4 @@
 @rules/architecture.md
 @rules/debugging.md
 @rules/quality.md
+@rules/management.md
