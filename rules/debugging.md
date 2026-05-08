@@ -66,6 +66,29 @@ async fn process_order(id: &str) -> Result<(), ApiError> {
 }
 ```
 
+## Evidence-based optimization
+
+Let data guide all decisions.
+
+- Benchmark before optimizing.
+- Use CLI tools to measure impact — `hyperfine`, `criterion`, `wrk`, `pprof`, `flamegraph`. Real numbers, not vibes.
+- Prefer profiling over guessing. The bottleneck is rarely where you think it is.
+- Profile to find actual bottlenecks, not assumed ones.
+- Test assumptions with real data — real shapes, real volumes, real distributions.
+- Use monitoring to measure the impact of changes in production.
+- Document performance expectations in comments — they're contracts the next change has to honor.
+
+✅ Document performance expectations:
+```rust
+/// Search articles with pagination.
+///
+/// Performance: Target <5ms p95 for 100 results.
+/// Uses index on (author_id, published_at DESC).
+async fn search_articles(author_id: &str, limit: u32) -> Result<Vec<Article>, ApiError> {
+    // ...
+}
+```
+
 ## If it's unusually slow, it's probably a bug
 
 Don't accept "normal" slowness — investigate. Things can be fast. Code can be fast.
