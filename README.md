@@ -1,6 +1,6 @@
 # agentic-engineering-philosophy
 
-*The accumulated, crystallized knowledge of twenty years of coding and architecture across the stack — from C to Python to distributed computing to front-end and brand development, generalized.*
+*The accumulated, crystallized knowledge of twenty years of coding and architecture across the stack — from C to Python to massively-scaled distributed computing to front-end and brand development, generalized.*
 
 Rules for AI coding agents.
 
