@@ -1,12 +1,19 @@
 # engineering-philosophy
 
-One source of truth for engineering principles, fed to AI coding agents.
+*The accumulated, crystallized knowledge of twenty years of engineering and coding.*
 
-→ **[rules/developer.md](./rules/developer.md)**
+Rules for AI coding agents.
+
+## The rules
+
+- [rules/developer.md](./rules/developer.md) — KISS, YOLO, DRY, evidence-based optimization, operational guardrails.
+- [rules/architecture.md](./rules/architecture.md) — language preferences, separation of concerns, hexagonal architecture.
+- [rules/debugging.md](./rules/debugging.md) — Zero Effect Law, Detective Mode, sub-1ms targets.
+- [rules/quality.md](./rules/quality.md) — Zero Warnings Policy, Go native.
 
 ## Install
 
-Pick one. Both produce the same effect — the agent sees the principles every session.
+Pick one. Both produce the same effect — the agent sees the rules every session.
 
 ### Option 1 — drop into `.claude/rules/`
 
@@ -16,23 +23,27 @@ Claude Code auto-loads any markdown in `.claude/rules/`.
 
 ```bash
 mkdir -p .claude/rules
-curl -fsSL https://raw.githubusercontent.com/bxxd/engineering-philosophy/main/rules/developer.md \
-  -o .claude/rules/developer.md
+for f in developer.md architecture.md debugging.md quality.md; do
+  curl -fsSL "https://raw.githubusercontent.com/bxxd/engineering-philosophy/main/rules/$f" \
+    -o ".claude/rules/$f"
+done
 ```
 
 **User scope** (every project on your machine):
 
 ```bash
 mkdir -p ~/.claude/rules
-curl -fsSL https://raw.githubusercontent.com/bxxd/engineering-philosophy/main/rules/developer.md \
-  -o ~/.claude/rules/developer.md
+for f in developer.md architecture.md debugging.md quality.md; do
+  curl -fsSL "https://raw.githubusercontent.com/bxxd/engineering-philosophy/main/rules/$f" \
+    -o "$HOME/.claude/rules/$f"
+done
 ```
 
 ### Option 2 — ask the agent
 
 Paste this into your Claude Code / Cursor / Codex / etc. session:
 
-> Fetch `https://raw.githubusercontent.com/bxxd/engineering-philosophy/main/rules/developer.md` and add it to this project. Either save it as `.claude/rules/developer.md`, or `@`-reference it from `CLAUDE.md` / `AGENTS.md` — pick whichever fits the existing setup.
+> Fetch the four rule files at `https://raw.githubusercontent.com/bxxd/engineering-philosophy/main/rules/` (`developer.md`, `architecture.md`, `debugging.md`, `quality.md`) and add them to this project. Either save them to `.claude/rules/`, or `@`-reference them from `CLAUDE.md` / `AGENTS.md` — pick whichever fits the existing setup.
 
 ## License
 
