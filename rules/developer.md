@@ -100,6 +100,17 @@ where
 }
 ```
 
+### Separation of concerns
+
+The boundary is where code quality is won or lost. One concern per module.
+
+- One module, one responsibility. The instinct "this code is doing too many things" is almost always right — trust it.
+- If you can't test a piece in isolation, the seams are wrong.
+- Modules don't reach into each other's internals — talk through interfaces, not field accesses.
+- Pairs with DRY: deduplication only works *inside* a concern. If you collapse code that belongs to two different concerns, you've coupled them — that's a bug, not a refactor.
+
+The architectural expression — domain vs infrastructure boundaries, ports and adapters — lives in [architecture.md](./architecture.md).
+
 ## Operational
 
 - `./tmp/` (not `/tmp/`) for scratch.
